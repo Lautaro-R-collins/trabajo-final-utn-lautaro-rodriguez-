@@ -275,11 +275,17 @@ footer {
 .contenedor {
     padding: 5px;
     width: 65%;
-    background-color: gray;
+    background-color: #678983;
+    border-radius: 10px
 }
 
-#play,#pause,#mute {
+#play,#pause,#mute,#volumeUp,#volumeDown {
     width: 70px;
+ }
+
+ .img-icon {
+    width: 12px;
+    height: 12px;
  }
 
 #showTime{
