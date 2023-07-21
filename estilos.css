@@ -140,6 +140,10 @@ h2 {
     margin-top: 40px;
 }
 
+.rompe-titulo {
+    margin-bottom: 40px;
+}
+
 .cont-principal {
     display: flex;
     justify-content: space-evenly;
@@ -381,6 +385,11 @@ footer {
   .mensaje-felicitaciones {
     color: #181D31;
     font-weight: bold;
+    width: 250px;
   }
   
+  /* nota:  completar los media query para hacerlo responsivo en mis proximos cambios */
   
+  @media (max-width: 767px) {
+
+  }
