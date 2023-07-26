@@ -31,13 +31,13 @@ muteBoton.addEventListener("click", function() {
   });
 
   
-  volumeUpBoton.addEventListener("click", function() {
+volumeUpBoton.addEventListener("click", function() {
     if (video.volume < 1) {
       video.volume += 0.2; 
     }
   });
   
-  volumeDownBoton.addEventListener("click", function() {
+volumeDownBoton.addEventListener("click", function() {
     if (video.volume > 0) {
       video.volume -= 0.2; 
     }
