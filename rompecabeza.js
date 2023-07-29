@@ -67,6 +67,7 @@ function mostrarMensaje(completo) {
   if (completo) {
     mensaje.textContent = "¡Gracias por jugar!";
     mensaje.classList.add("mensaje-felicitaciones");
+    
  
   }
 
@@ -74,3 +75,4 @@ function mostrarMensaje(completo) {
 }
 
 iniciar();
+

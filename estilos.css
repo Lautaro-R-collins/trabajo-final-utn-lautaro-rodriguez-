@@ -327,11 +327,13 @@ footer {
     align-items: center;
     border: 2px solid black;
     background-color: grey;
+    transition: transform 0.3s ease;
 }
+
 
 .foto:hover{
     background-color: #1d1d1d;
-    
+    transform: scale(1.01);
 }
 .foto:hover>p{
     color: #E6DDC4;
@@ -344,6 +346,15 @@ footer {
     margin: 40px;
     padding: 20px;
 }
+
+#caja-imagenes:hover {
+    cursor: grab;
+  }
+
+#caja-imagenes:active {
+  cursor: grabbing;
+}
+
 #imagen1,#imagen2,#imagen3{
     width: 275px;
     height: 400px;
@@ -353,6 +364,15 @@ footer {
     margin: auto;
     margin-bottom: 40px;
     padding: 10px 80px;
+    cursor: pointer;
+    border: none;
+}
+
+.reinicio:active{
+    transform: translate(3px, 2px);
+}
+.reinicio:active {
+    box-shadow:0px 0px ;
 }
 
 .mensaje {
