@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./estilos.css"> 
 </head>
 <body>
+    <section id="nav">
     <nav class="nav-bar">
         <a href="./index.html">
             <div class="logo-animado">
@@ -25,35 +26,48 @@
             <li class="menu-boton"><a class="link-menu"  href="./juguemos.html">JUGUEMOS</a></li>
         </ul>
     </nav>
+    </section>
 
     <header> 
-        <h1 class="titulo">PROGRAMACION E HISTORIA</h1>
+        <h1>PROGRAMACION E HISTORIA</h1>
     </header>
 
     <h2>CONTENIDO</h2>
 
     <main class="cont-principal">
-        <div class="cart">
-            <img class="img-cart" src="imagenes/img1.jpg" alt="imagen=producto">
-            <p class="desc-cart">Conozcamos Un poco sobre la historia de la programacion </p>
-            <a class="boton-cart"href="./historia.html" style="color:#F0F5E4">Ir a Historia</a>
+        <div class="card">
+            <img class="img-card" src="imagenes/img1.jpg" alt="imagen=producto">
+            <p class="desc-card">Conozcamos Un poco sobre la historia de la programacion </p>
+            <a class="boton-card"href="./historia.html">Ir a Historia</a>
         </div>
 
-        <div class="cart">
-            <img class="img-cart" src="imagenes/img2.jpg" alt="imagen=producto">
-            <p class="desc-cart">Juguemos un poco sobre la computacion</p>
-            <a class="boton-cart" href="./juguemos.html" style="color:#F0F5E4">Ir a juego</a>
+        <div class="card">
+            <img class="img-card" src="imagenes/img2.jpg" alt="imagen=producto">
+            <p class="desc-card">Juguemos un poco sobre la computacion</p>
+            <a class="boton-card" href="./juguemos.html">Ir a juego</a>
         </div>
     </main>
 
     <footer>
         <div class="footer-logo">
-            <img class="logo animate-footer " src="imagenes/logo.png" alt="logo">
-            <h3 class="cont-footer">PROGRAMACION <br> E <br> HISTORIA </h3>
+            <img class="logo" src="imagenes/logo.png" alt="logo">
+            <h3>PROGRAMACION <br>E</br> HISTORIA </h3>
         </div>
-        <div>Alumno: Lautaro Rodriguez Collins</div>
+        <div>
+            <strong>Alumno:Lautaro Rodriguez Collins</strong>
+        </div>
     </footer>
+    <script>
+        const footerLogo = document.querySelector(".footer-logo");
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              footerLogo.classList.add("logo");
+              observer.unobserve(entry.target);
+               }
+            });
+        });
+        observer.observe(footerLogo);
+    </script>
 </body>
-<script src="./script.js"></script>
-<script src="./logo-footer.js"></script>
 </html>

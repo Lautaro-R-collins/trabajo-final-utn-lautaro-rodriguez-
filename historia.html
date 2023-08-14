@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./estilos.css">    
 </head>
 <body>
+    <secton id="nav">
     <nav class="nav-bar">
         <a href="./index.html">
             <div class="logo-animado">
@@ -25,13 +26,14 @@
             <li class="menu-boton"><a class="link-menu"  href="./juguemos.html">JUGUEMOS</a></li>
         </ul>
     </nav>
+    </secton>
 
     <header> 
-        <h1 class="titulo">HISTORIA DE LA PROGRAMACION</h1>
+        <h1>HISTORIA DE LA PROGRAMACION</h1>
     </header>
 
     <main class="cont-historia">
-        <div class="cart-historia">
+        <div class="card-historia">
             <h2>El principio de la historia de la programación</h2>
             <p class="text-historia">El primer lenguaje de programación fue un algoritmo creado por Ada Lovelace en 1883.
              Ada Lovelace creó este algoritmo para el motor analítico de Charles Babbage. 
@@ -40,7 +42,7 @@
             Church expresó el cálculo lambda de forma formulativa.</p>
         </div>
 
-        <div class="cart-historia">
+        <div class="card-historia">
             <p class="text-historia">Los primeros ordenadores modernos (alimentados eléctricamente) 
                 fueron creados en los años 40.
                 Estas computadoras estaban limitadas en velocidad y capacidad de memoria.
@@ -52,7 +54,7 @@
 
         </div>
 
-        <div class="cart-historia">
+        <div class="card-historia">
             <h2>Los primeros lenguajes de programación</h2>
             <p class="text-historia">
                 FORmulaTRANslation es el lenguaje de programación más antiguo y que continúa en uso. Creada por John Backus en 1957,
@@ -91,11 +93,24 @@
     <footer>
         <div class="footer-logo">
             <img class="logo" src="imagenes/logo.png" alt="logo">
-            <h3 class="cont-footer">PROGRAMACION <br> E <br> HISTORIA </h3>
+            <h3>PROGRAMACION <br>E</br> HISTORIA </h3>
         </div>
-        <div>Alumno: Lautaro Rodriguez Collins</div>
+        <div>
+            <strong>Alumno:Lautaro Rodriguez Collins</strong>
+        </div>
     </footer>
+    <script>
+        const footerLogo = document.querySelector(".footer-logo");
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              footerLogo.classList.add("logo");
+              observer.unobserve(entry.target);
+               }
+            });
+        });
+        observer.observe(footerLogo);
+    </script>
 </body>
-<script src="./script.js"></script>
-<script src="./logo-footer.js"></script>
+<script src="./video.js"></script>
 </html>

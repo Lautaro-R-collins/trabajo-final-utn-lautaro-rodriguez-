@@ -25,8 +25,9 @@
             <li class="menu-boton"><a class="link-menu"  href="./juguemos.html">JUGUEMOS</a></li>
         </ul>
     </nav>
+
     <header> 
-        <h1 class="titulo">JUGUEMOS UN POCO</h1>
+        <h1>JUGUEMOS UN POCO</h1>
     </header>
 
     <main>
@@ -51,16 +52,29 @@
             </div>
         </section>
         <button onclick="reinicio()" class="botonesVideo reinicio" >Reiniciar</button>
-
     </main>
+
     <footer>
         <div class="footer-logo">
             <img class="logo" src="imagenes/logo.png" alt="logo">
-            <h3 class="cont-footer">PROGRAMACION <br> E <br> HISTORIA </h3>
+            <h3>PROGRAMACION <br>E</br> HISTORIA </h3>
         </div>
-        <div>Alumno: Lautaro Rodriguez Collins</div>
-    </footer>   
+        <div>
+            <strong>Alumno:Lautaro Rodriguez Collins</strong>
+        </div>
+    </footer>
+    <script>
+        const footerLogo = document.querySelector(".footer-logo");
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              footerLogo.classList.add("logo");
+              observer.unobserve(entry.target);
+               }
+            });
+        });
+        observer.observe(footerLogo);
+    </script>  
 </body>
 <script src="./rompecabeza.js"></script>
-<script src="./logo-footer.js"></script>
 </html>

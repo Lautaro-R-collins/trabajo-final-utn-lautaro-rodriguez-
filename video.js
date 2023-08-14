@@ -22,23 +22,21 @@ pauseBoton.addEventListener("click", function() {
 
 muteBoton.addEventListener("click", function() {
     if (video.muted) {
-      video.muted = false;
-      
+      video.muted = false;     
     } else {
-      video.muted = true;
-      
-    }
-  });
+      video.muted = true;     
+  }
+});
 
   
 volumeUpBoton.addEventListener("click", function() {
     if (video.volume < 1) {
       video.volume += 0.2; 
-    }
-  });
+  }
+});
   
 volumeDownBoton.addEventListener("click", function() {
     if (video.volume > 0) {
       video.volume -= 0.2; 
-    }
-  });
+  }
+});
